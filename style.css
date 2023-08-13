@@ -1,0 +1,106 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+
+/* ----------------------------------------------------------- */
+/* Hero Section */
+#hero {
+  background-image: url(./img/rd.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+#hero .hero {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: flex-start;
+}
+
+#hero #box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+#imp {
+  color: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  position: relative;
+  font-weight: bold;
+}
+
+.list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem auto;
+  /* margin-left: 15rem; */
+}
+/* End Hero Section */
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  #hero h1 {
+    font-size: 7rem;
+  }
+
+  #hero #box {
+    display: block;
+  }
+
+  #imp {
+    padding-top: 3rem;
+    font-size: 3rem;
+  }
+
+  .list-item {
+    font-size: 1.5rem;
+  }
+}
